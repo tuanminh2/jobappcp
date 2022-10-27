@@ -44,7 +44,7 @@
             <span class="close">&times;</span>
         </div>
         <div class="row">
-            <!-- {% for template in templates %}
+            {% for template in templates %}
                 <div class="column">
                     <div class="card card-template" data-templateid="{{ template.id }}">
                         <img src="{{ template.thumbnail.url }}" alt="{{ template.name }}"
@@ -54,7 +54,7 @@
                         </div>
                     </div>
                 </div>
-            {% endfor %} -->
+            {% endfor %}
         </div>
     </div>
 </div>
@@ -69,16 +69,17 @@
 <div id="gjs"></div>
 
 <script type="text/javascript">
-    // var _token = '{{ token }}';
-    var upload_Image = 'uploadimage_url';
-    var url_load_template = "";
-    // var url_default_css_template = '{% static 'css/font-awesome.css' %}';
-    // var urlStore = '{% url 'resume-cv.update.builder' resume.id %}';
-    // var urlLoad = '{% url 'resume-cv.load.builder' resume.id %}';
+  var _token = 'abc';
+   
+
     var back_button_url = "{% url 'resume_cv:templates' %}";
     var exportPDF_url = "";
+    var upload_Image = 'uploadimage_url';
+    var url_load_template = "";
+    var url_default_css_template = `{% static 'css/font-awesome.css' %}`;
+    var urlStore = '/media/resumes/2022/10/27/uEP4DeFxmaugGBW53i2uCBkzaCcAOx.png';
+    var urlLoad = '/media/resumes/2022/10/27/uEP4DeFxmaugGBW53i2uCBkzaCcAOx.png';
 
-    // var images_url = ['{% static 'img/1875187.jpg' %}'];
     var images_url = ['https://resumegenius.com/wp-content/uploads/Retail-Manager-Resume-Example-v5-800x1035.png'];
     var all_fonts = ['Arial', 'Verdana', 'Helvetica', 'Tahoma', 'Trebuchet MS', 'Times New Roman', 'Georgia', 'Garamond', 'Courier New', 'Brush Script MT'];
     var langs = {
@@ -92,9 +93,13 @@
     var all_icons = ["fab fa-500px", "fab fa-accessible-icon", "fab fa-accusoft", "fab fa-acquisitions-incorporated", "fas fa-ad", "fas fa-address-book", "far fa-address-book", "fas fa-address-card"];
 
 </script>
-<script src="{% static 'js/builder.js' %}"></script>
-<script src="{% static 'js/preset.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/grapesjs/0.20.1/grapes.min.js" integrity="sha512-T0qOb1Uc2YfTk1DH9CHT051T9bZh+raUFW6bBbgPbFk4RFrpBCBhXEGDYFW6Vv2xvMoCj1ZL81Xt/jfaZBglcQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <script src="{% static 'js/custom-builder.js' %}"></script>
+<script src="{% static 'js/builder.js' %}"></script>
+<script src="{% static 'js/preset.js' %}"></script> 
+
 </body>
 
 </html>

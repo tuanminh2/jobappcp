@@ -54,9 +54,9 @@ def resume_builder(request, code):
     Resume builder
     """
     # resume = ResumeCv.objects.get(code=code)
-    # templates = ResumeCvTemplate.objects.all()
+    templates = ResumeCvTemplate.objects.all()
     # token = get_token(request)
-    return render(request, "resumes/builder.html", {"resume": resume, "templates": templates, "token": token})
+    return render(request, "resumes/builder.html", {"templates":templates})
 
 
 def update_builder(request, id):
